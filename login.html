@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Login | EduWeb</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Ionicons -->
+
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+
+    <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+
+
+    <!-- LOGIN PAGE CSS -->
+
+    <link
+        rel="stylesheet"
+        href="./assets/css/login.css">
+
+</head>
+
+
+<body>
+
+
+    <main class="auth-page">
+
+        <div class="auth-container">
+
+            <section class="auth-left">
+
+
+                <div class="auth-left-content">
+
+
+                    <p class="welcome-label">
+                        WELCOME TO EDUWEB
+                    </p>
+
+
+                    <h1 class="welcome-title">
+                        Learn today.<br>
+                        Lead tomorrow.
+                    </h1>
+
+
+                    <p class="welcome-description">
+                        Continue your learning journey with
+                        EduWeb and gain the skills you need
+                        for your future.
+                    </p>
+
+
+                    <!-- FEATURES -->
+
+                    <div class="features">
+
+
+                        <div class="feature">
+
+                            <ion-icon
+                                name="checkmark-circle-outline">
+                            </ion-icon>
+
+                            <span>
+                                Learn from expert instructors
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <ion-icon
+                                name="checkmark-circle-outline">
+                            </ion-icon>
+
+                            <span>
+                                Access courses anytime, anywhere
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <ion-icon
+                                name="checkmark-circle-outline">
+                            </ion-icon>
+
+                            <span>
+                                Build skills for your future
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+            <section class="auth-right" id="authRight">
+
+
+                <!-- ==================================================
+                     LOGIN
+                =================================================== -->
+
+                <div
+                    class="auth-content login-content"
+                    id="loginContent">
+
+
+                    <div class="auth-header">
+
+                        <p class="auth-label">
+                            WELCOME BACK
+                        </p>
+
+                        <h2 class="auth-title">
+                            Login to your account
+                        </h2>
+
+                    </div>
+
+
+
+                    <form id="loginForm">
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="loginEmail">
+                                Email address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="Enter your email"
+                                autocomplete="email">
+
+                        </div>
+
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="form-group">
+
+
+                            <div class="label-row">
+
+                                <label for="loginPassword">
+                                    Password
+                                </label>
+
+                                <a
+                                    href="#"
+                                    class="forgot-password">
+
+                                    Forgot password?
+
+                                </a>
+
+                            </div>
+
+
+                            <div class="password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="loginPassword"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password">
+
+
+                                <button
+                                    type="button"
+                                    id="loginPasswordToggle"
+                                    class="password-toggle"
+                                    aria-label="Show password">
+
+                                    <ion-icon
+                                        id="loginPasswordIcon"
+                                        name="eye-outline">
+                                    </ion-icon>
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- REMEMBER ME -->
+
+                        <div class="remember-container">
+
+                            <label class="remember-label">
+
+                                <input
+                                    type="checkbox"
+                                    id="rememberMe">
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- LOGIN BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="main-button">
+
+                            Login
+
+                        </button>
+
+
+                        <!-- LOGIN MESSAGE -->
+
+                        <p
+                            class="form-message"
+                            id="loginMessage">
+                        </p>
+
+
+                        <!-- REGISTER LINK -->
+
+                        <p class="switch-text">
+
+                            Don't have an account?
+
+                            <button
+                                type="button"
+                                id="showRegister">
+
+                                Create account
+
+                            </button>
+
+                        </p>
+
+
+                    </form>
+
+
+                </div>
+
+
+                <!-- ==================================================
+                     REGISTER
+                =================================================== -->
+
+                <div
+                    class="auth-content register-content"
+                    id="registerContent">
+
+
+                    <div class="auth-header">
+
+                        <p class="auth-label">
+                            GET STARTED
+                        </p>
+
+                        <h2 class="auth-title">
+                            Create your account
+                        </h2>
+
+                    </div>
+
+
+
+                    <form id="registerForm">
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="registerName">
+                                Full name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="registerName"
+                                placeholder="Enter your full name"
+                                autocomplete="name">
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="registerEmail">
+                                Email address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="registerEmail"
+                                placeholder="Enter your email"
+                                autocomplete="email">
+
+                        </div>
+
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="form-group">
+
+                            <label for="registerPassword">
+                                Password
+                            </label>
+
+
+                            <div class="password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="registerPassword"
+                                    placeholder="Create a password"
+                                    autocomplete="new-password">
+
+
+                                <button
+                                    type="button"
+                                    id="registerPasswordToggle"
+                                    class="password-toggle"
+                                    aria-label="Show password">
+
+                                    <ion-icon
+                                        id="registerPasswordIcon"
+                                        name="eye-outline">
+                                    </ion-icon>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- REGISTER BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="main-button">
+
+                            Create Account
+
+                        </button>
+
+
+                        <!-- REGISTER MESSAGE -->
+
+                        <p
+                            class="form-message"
+                            id="registerMessage">
+                        </p>
+
+
+                        <!-- BACK TO LOGIN -->
+
+                        <p class="switch-text">
+
+                            Already have an account?
+
+                            <button
+                                type="button"
+                                id="showLogin">
+
+                                Login
+
+                            </button>
+
+                        </p>
+
+
+                    </form>
+
+
+                </div>
+
+
+                <!-- ==================================================
+                     SUCCESS
+                =================================================== -->
+
+                <div
+                    class="auth-content success-content"
+                    id="successContent">
+
+
+                    <div class="success-icon">
+
+                        <ion-icon
+                            name="checkmark-circle-outline">
+                        </ion-icon>
+
+                    </div>
+
+
+                    <p class="auth-label">
+                        SUCCESS
+                    </p>
+
+
+                    <h2 class="success-title">
+                        Account created successfully!
+                    </h2>
+
+
+                    <p class="success-description">
+                        Your account has been created.
+                        You can now login to your EduWeb account.
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="main-button"
+                        id="successLogin">
+
+                        Login
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- LOGIN PAGE JAVASCRIPT -->
+
+    <script src="./assets/js/login.js"></script>
+
+</body>
+
+</html>

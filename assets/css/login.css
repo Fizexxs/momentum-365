@@ -1,0 +1,807 @@
+/*=========================================================
+  EDUWEB LOGIN / REGISTER PAGE
+=========================================================*/
+
+
+/*=========================================================
+  ROOT
+=========================================================*/
+
+:root {
+
+    --kappel: hsl(170, 75%, 41%);
+
+    --kappel-dark: hsl(170, 75%, 35%);
+
+    --selective-yellow: hsl(42, 94%, 55%);
+
+    --eerie-black: hsl(0, 0%, 9%);
+
+    --gray-web: hsl(0, 0%, 50%);
+
+    --light-gray: hsl(0, 0%, 80%);
+
+    --platinum: hsl(0, 0%, 90%);
+
+    --white: hsl(0, 0%, 100%);
+
+    --error: hsl(351, 83%, 61%);
+
+    --ff-league:
+        'League Spartan',
+        sans-serif;
+
+    --ff-poppins:
+        'Poppins',
+        sans-serif;
+
+    --transition:
+        0.3s ease;
+
+}
+
+
+/*=========================================================
+  RESET
+=========================================================*/
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    font-size: 10px;
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: var(--white);
+
+    font-family: var(--ff-poppins);
+
+}
+
+
+button,
+input {
+
+    font: inherit;
+
+}
+
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+/*=========================================================
+  MAIN PAGE
+=========================================================*/
+
+.auth-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+}
+
+
+.auth-container {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+/*=========================================================
+  LEFT SIDE
+  THIS SIDE NEVER CHANGES
+=========================================================*/
+
+.auth-left {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            hsl(170, 75%, 40%),
+            hsl(151, 58%, 46%)
+        );
+
+}
+
+
+/* Decorative circle */
+
+.auth-left::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    top: -300px;
+
+    right: -150px;
+
+    border-radius: 50%;
+
+    background:
+        hsla(0, 0%, 100%, 0.08);
+
+}
+
+
+/* Decorative circle */
+
+.auth-left::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    bottom: -260px;
+
+    left: -170px;
+
+    border-radius: 50%;
+
+    background:
+        hsla(0, 0%, 100%, 0.08);
+
+}
+
+
+.auth-left-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 50px;
+
+}
+
+
+/*=========================================================
+  LEFT SIDE TEXT
+=========================================================*/
+
+.welcome-label {
+
+    margin-bottom: 25px;
+
+    color: var(--selective-yellow);
+
+    font-family: var(--ff-league);
+
+    font-size: 2.4rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.welcome-title {
+
+    margin-bottom: 35px;
+
+    color: var(--white);
+
+    font-family: var(--ff-league);
+
+    font-size: clamp(
+        5rem,
+        5vw,
+        7rem
+    );
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+}
+
+
+.welcome-description {
+
+    max-width: 700px;
+
+    margin-bottom: 45px;
+
+    color: var(--white);
+
+    font-family: var(--ff-poppins);
+
+    font-size: 1.9rem;
+
+    line-height: 1.9;
+
+}
+
+
+/*=========================================================
+  FEATURES
+=========================================================*/
+
+.features {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    color: var(--white);
+
+    font-family: var(--ff-league);
+
+    font-size: 2rem;
+
+    font-weight: 500;
+
+}
+
+
+.feature ion-icon {
+
+    flex-shrink: 0;
+
+    color: var(--selective-yellow);
+
+    font-size: 28px;
+
+}
+
+
+/*=========================================================
+  RIGHT SIDE
+=========================================================*/
+
+.auth-right {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 60px 70px;
+
+    background: var(--white);
+
+}
+
+
+.auth-content {
+
+    width: 100%;
+
+    max-width: 710px;
+
+}
+
+
+/*=========================================================
+  AUTH HEADER
+=========================================================*/
+
+.auth-label {
+
+    margin-bottom: 8px;
+
+    color: var(--kappel);
+
+    font-family: var(--ff-league);
+
+    font-size: 2.1rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.auth-title {
+
+    margin-bottom: 65px;
+
+    color: var(--eerie-black);
+
+    font-family: var(--ff-league);
+
+    font-size: clamp(
+        4rem,
+        4vw,
+        6rem
+    );
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+
+.form-group label {
+
+    display: block;
+    margin-bottom: 10px;
+    color: var(--eerie-black);
+    font-family: var(--ff-league);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+.form-group > input {
+
+    width: 100%;
+    height: 55px;
+    padding: 0;
+    border-bottom: 1px solid var(--platinum);
+    color: var(--eerie-black);
+    background: transparent;
+    font-family: var(--ff-poppins);
+    font-size: 1.7rem;
+    transition: var(--transition);
+}
+
+.form-group > input::placeholder {
+    color: var(--gray-web);
+}
+
+.form-group > input:focus {
+    border-bottom-color:
+        var(--kappel);
+}
+
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.label-row label {
+    margin-bottom: 0;
+}
+
+.forgot-password {
+    color: var(--kappel);
+    font-family: var(--ff-poppins);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.forgot-password:hover {
+    color: var(--kappel-dark);
+}
+
+
+.password-wrapper {
+
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border: 1px solid var(--platinum);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.password-wrapper:focus-within {
+
+    border-color: var(--kappel);
+}
+
+.password-wrapper input {
+
+    width: 100%;
+    height: 100%;
+    padding:
+        0 60px 0 25px;
+    color: var(--eerie-black);
+    background: transparent;
+    font-size: 1.7rem;
+}
+
+.password-wrapper input::placeholder {
+
+    color: var(--gray-web);
+}
+
+.password-toggle {
+
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    color: var(--gray-web);
+    font-size: 24px;
+}
+
+.password-toggle:hover {
+    color: var(--kappel);
+}
+
+.remember-container {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.remember-label {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--gray-web);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.remember-label input {
+
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    border: 2px solid var(--gray-web);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.remember-label input:checked {
+    border-color: var(--kappel);
+    background: var(--kappel);
+}
+
+.remember-label input:checked::after {
+
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(
+        -50%,
+        -50%
+    );
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.main-button {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background:
+        linear-gradient(
+            90deg,
+            hsl(170, 75%, 41%),
+            hsl(151, 58%, 46%)
+        );
+
+    color: var(--white);
+    font-family: var(--ff-league);
+    font-size: 2rem;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.main-button:hover {
+    transform: translateY(-2px);
+}
+
+.form-message {
+    min-height: 24px;
+    margin-top: 12px;
+    color: var(--error);
+    font-size: 1.4rem;
+}
+
+
+
+.switch-text {
+    margin-top: 45px;
+    text-align: center;
+    color: var(--gray-web);
+    font-size: 1.6rem;
+}
+
+.switch-text button {
+    display: inline;
+    margin-left: 5px;
+    padding: 0;
+    background: transparent;
+    color: var(--eerie-black);
+    font-size: inherit;
+    text-decoration: underline;
+}
+
+.switch-text button:hover {
+    color: var(--kappel);
+}
+
+
+.register-content .auth-title {
+    margin-bottom: 45px;
+}
+
+.register-content .form-group {
+    margin-bottom: 22px;
+}
+
+.register-content .main-button {
+    margin-top: 10px;
+}
+
+.success-content {
+    text-align: center;
+}
+
+.success-content .auth-label {
+    margin-bottom: 15px;
+}
+
+.success-icon {
+    margin-bottom: 25px;
+}
+
+.success-icon ion-icon {
+    color: var(--kappel);
+    font-size: 90px;
+}
+
+.success-title {
+    margin-bottom: 20px;
+    color: var(--eerie-black);
+    font-family: var(--ff-league);
+    font-size: 4.5rem;
+    line-height: 1.1;
+}
+
+.success-description {
+    max-width: 550px;
+    margin: 0 auto 35px;
+    color: var(--gray-web);
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.success-content .main-button {
+    max-width: 300px;
+    margin-inline: auto;
+}
+
+
+.register-content,
+.success-content {
+    display: none;
+}
+
+
+.auth-right.register-mode
+.login-content {
+    display: none;
+}
+
+.auth-right.register-mode
+.register-content {
+    display: block;
+}
+
+
+.auth-right.success-mode
+.login-content {
+    display: none;
+}
+
+.auth-right.success-mode
+.register-content {
+    display: none;
+}
+
+.auth-right.success-mode
+.success-content {
+    display: block;
+}
+
+@media (max-width: 1100px) {
+
+    .auth-right {
+        padding:
+            50px 45px;
+    }
+
+    .auth-left-content {
+        padding: 45px;
+    }
+
+    .welcome-title {
+        font-size: 5rem;
+    }
+
+    .welcome-description {
+        font-size: 1.7rem;
+    }
+
+    .feature {
+        font-size: 1.7rem;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-left {
+        min-height: auto;
+    }
+
+    .auth-left-content {
+        padding: 60px 40px;
+    }
+
+    .welcome-title {
+        font-size: 5.5rem;
+    }
+
+    .auth-right {
+        min-height: auto;
+        padding:
+            70px 40px;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    .auth-left-content {
+        padding:
+            45px 25px;
+    }
+
+    .welcome-label {
+        font-size: 1.8rem;
+    }
+
+    .welcome-title {
+        font-size: 4.2rem;
+    }
+
+    .welcome-description {
+        font-size: 1.5rem;
+    }
+
+    .feature {
+        font-size: 1.6rem;
+        gap: 12px;
+    }
+
+    .feature ion-icon {
+        font-size: 22px;
+    }
+
+    .auth-right {
+        padding:
+            50px 25px;
+    }
+
+    .auth-title {
+        margin-bottom: 45px;
+        font-size: 4rem;
+    }
+
+    .auth-label {
+        font-size: 1.8rem;
+    }
+
+    .label-row {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .forgot-password {
+        font-size: 1.3rem;
+    }
+
+    .success-title {
+        font-size: 3.5rem;
+    }
+
+}
